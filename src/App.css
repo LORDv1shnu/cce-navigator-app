@@ -1,4 +1,5 @@
 
+
 /* Reset and base styles */
 html, body, #root {
   height: 100vh;
@@ -6,7 +7,8 @@ html, body, #root {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background: #f5f6fa;
+  background: #181a20;
+  color: #e0e0e0;
   overflow: hidden;
 }
 
@@ -16,15 +18,26 @@ html, body, #root {
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background: #181a20;
 }
 
 .map-selector {
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  background: #23263a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
   z-index: 1000;
   text-align: left;
   padding: 12px 24px;
   font-size: 1.1rem;
+  color: #e0e0e0;
+  border-bottom: 1px solid #23263a;
+}
+.map-selector select {
+  background: #181a20;
+  color: #e0e0e0;
+  border: 1px solid #23263a;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 1rem;
 }
 
 .leaflet-container {
@@ -33,8 +46,32 @@ html, body, #root {
   height: 100% !important;
   min-width: 0 !important;
   min-height: 0 !important;
-  background: #fff;
+  background: #23263a;
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
   display: block;
+  border: none;
+}
+
+/* Improve leaflet controls for dark mode */
+.leaflet-control {
+  background: #23263a !important;
+  color: #e0e0e0 !important;
+  border: 1px solid #23263a !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18) !important;
+}
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  color: #e0e0e0 !important;
+  background: #23263a !important;
+  border: 1px solid #23263a !important;
+}
+.leaflet-bar a {
+  background: #23263a !important;
+  color: #e0e0e0 !important;
+  border: none !important;
+}
+.leaflet-bar a:hover {
+  background: #4f8cff !important;
+  color: #fff !important;
 }
